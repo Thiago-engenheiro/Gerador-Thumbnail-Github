@@ -1,0 +1,34 @@
+.Rodape {
+
+    width: 100%;
+    color: white;
+    font-size: 20px;
+    font-family: beckman;
+    position: relative;
+    text-align: center;
+    
+  
+    
+}
+
+.criador {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.LogoMenor {
+
+    width: 75px;
+
+}
+
+.versao {
+
+    position: absolute;
+    bottom: -50px;
+    left: 20px;
+
+}
