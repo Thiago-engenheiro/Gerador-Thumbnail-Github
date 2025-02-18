@@ -1,0 +1,236 @@
+.ContinerVisualizacaoImagem {
+
+    background-size: cover;
+    background-position: center;
+    width: calc(1200px - 40px);
+    height: calc(700px - 40px);
+    margin: 100px 0px 100px 0px;
+    padding: 20px;
+    position: relative;
+    font-family: beckman;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+
+}
+
+.ContinerVisualizacaoImagem::before {
+
+    content: ''; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: var(--fundo-imagem, url('/imagens/fundos/fundoBrancoGeometrico.jpg')); /* Fundo dinâmico */
+    background-size: cover;
+    background-position: center;
+    filter: blur(var(--blur-value, 0));
+    z-index: -1; 
+
+}
+
+.continerVisualizacaoCima {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.Logo {
+
+    width: 100px;
+
+}
+
+.tituloSlogan {
+
+    font-size: 40px;
+    
+}
+
+.tituloVisualizacao {
+
+    font-size: 80px;
+
+}
+
+.subtituloVisualizacao {
+
+    font-size: 40px;
+    margin: 15px 0px 0px 0px;
+ 
+
+}
+
+.continerVisualizacaoFinal {
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+}
+
+.VisualizacaoTipoDeProjeto {
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #FFA500;
+    padding: 10px;
+    margin: 0px -20px 0px 0px;
+    border-radius: 12px 0px 0px 12px;
+
+}
+
+.Icone {
+
+    width: 30px;
+
+}
+
+.textoIcone {
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    
+}
+
+@media (max-width: 1800px) {
+
+    .ContinerVisualizacaoImagem {
+    
+        width: calc(60% - 40px);
+    
+    }
+
+    .Logo {
+
+        width: 70px;
+    
+    }
+
+    .tituloSlogan {
+
+        font-size: 30px;
+        
+    }
+
+    .tituloVisualizacao {
+
+        font-size: 60px;
+    
+    }
+    
+    .subtituloVisualizacao {
+    
+        font-size: 30px;
+    
+    }
+    
+}
+
+@media (max-width: 1000px) {
+
+    .ContinerVisualizacaoImagem {
+    
+        width: calc(80% - 40px);
+    
+    }
+
+    .Logo {
+
+        width: 50px;
+    
+    }
+
+    .tituloSlogan {
+
+        font-size: 20px;
+        
+    }
+
+    .tituloVisualizacao {
+
+        font-size: 40px;
+    
+    }
+    
+    .subtituloVisualizacao {
+    
+        font-size: 20px;
+    
+    }
+
+}
+
+@media (max-width: 700px) {
+
+    .ContinerVisualizacaoImagem {
+    
+        width: calc(90% - 40px);
+    
+    }
+
+}
+
+@media (max-width: 600px) {
+
+
+    .ContinerVisualizacaoImagem {
+    
+        height: calc(500px - 40px);
+    
+    }
+
+    .Logo {
+
+        width: 40px;
+    
+    }
+
+    .tituloSlogan {
+
+        font-size: 15px;
+        text-align: end;
+        
+    }
+
+    .tituloVisualizacao {
+
+        font-size: 30px;
+    
+    }
+    
+    .subtituloVisualizacao {
+    
+        font-size: 15px;
+    
+    }
+
+    .textoIcone {
+
+        font-size: 12px;
+         
+    }
+
+    .Icone {
+
+        width: 20px;
+    
+    }
+
+}
+
+@media (max-width: 400px) {
+
+    .ContinerVisualizacaoImagem {
+    
+        height: calc(400px - 40px);
+    
+    }
+
+}

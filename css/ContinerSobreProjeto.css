@@ -1,0 +1,151 @@
+.ContinerSobreProjeto {
+
+    width: 70%;
+    height: auto;
+    color: white;
+    background-color: #111111;
+    padding: 10px;
+    font-family: "Lucida Console", Monaco, monospace;
+    box-shadow: 0px 10px 10px rgb(0, 0, 0);
+}
+
+.ContinerSobreProjeto:hover {
+    
+    transform: translateY(-7px);
+    box-shadow: 0px 10px 10px rgb(71, 127, 67);
+}
+
+.ContinerSobreProjeto-topo {
+
+    background-color: #111111;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+}
+
+.ContinerBolinhas {
+
+    display: flex;
+    gap: 10px;
+    align-items: center;
+
+}
+
+.bolinha {
+
+    width: 20px;
+    height: 20px;
+    border-radius: 100%; 
+   
+
+}
+
+.vermelho{
+
+    background: red;
+}
+
+.amarelo{
+
+    background: yellow;
+
+}
+
+.verde{
+
+    background: green;
+
+}
+
+.TituloTopo {
+
+    font-size: 30px;
+
+}
+
+.ContinerSobreProjeto-texto {
+
+    padding: 20px;
+    background-color: #222222;
+    font-size: 20px;
+   
+}
+
+.Titulo {
+
+    color: gray;
+    text-align: center;
+    font-size: 25px;
+   
+}
+
+.texto {
+
+    color: aqua;
+
+}
+
+mark {
+
+    color: greenyellow;
+    background: none;
+
+}
+
+.link {
+
+    color: rgb(181, 103, 255);
+
+}
+
+.link:hover {
+
+    color: rgb(213, 168, 255);
+
+}
+
+@media (max-width: 1080px) {
+
+    .ContinerSobreProjeto {
+
+        width: 80%;
+       
+    }
+    
+}
+
+@media (max-width: 700px) {
+
+    .ContinerSobreProjeto {
+
+        width: 90%;
+       
+    }
+    
+}
+  
+@media (max-width: 421px) {
+  
+    .TituloTopo {
+
+        font-size: 20px;
+    
+    }
+
+    
+    .bolinha {
+
+        width: 15px;
+        height: 15px;
+
+    }
+
+    .Titulo {
+
+        font-size: 20px;
+    
+    }
+
+}
