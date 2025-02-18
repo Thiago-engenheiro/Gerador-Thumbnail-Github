@@ -200,15 +200,134 @@ document.addEventListener("DOMContentLoaded", function () {
   const corValorBarra = document.querySelector("#corBarra");
   const corBarra = document.querySelector(".corBarra");
   const continerBarra = document.querySelector(".Linha");
+  const continerTextoEIcone = document.querySelector(".VisualizacaoTipoDeProjeto");
 
   function atualizarCorBarra() {
     const corBarraValor = corValorBarra.value;
     corBarra.textContent = `${corBarraValor}`;
     continerBarra.style.backgroundColor = corBarraValor;
+    continerTextoEIcone.style.backgroundColor = corBarraValor;
+
   }
 
   atualizarCorBarra();
   corValorBarra.addEventListener("input", atualizarCorBarra);
 });
 
-document.addEventListener("DOMContentLoaded", function () {});
+document.addEventListener("DOMContentLoaded", function () {
+  const corValorBarraTexto = document.querySelector("#corBarraTexto");
+  const corBarraTexto = document.querySelector(".corBarraTexto");
+  const continerBarraTexto = document.querySelector(".textoIcone");
+
+  function atualizarCorBarraTexto() {
+    const corBarraValorTexto = corValorBarraTexto.value;
+    corBarraTexto.textContent = `${corBarraValorTexto}`;
+    continerBarraTexto.style.color = corBarraValorTexto;
+  }
+
+  atualizarCorBarraTexto();
+  corValorBarraTexto.addEventListener("input", atualizarCorBarraTexto);
+
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  document.getElementById("file").addEventListener("change", function (event) {
+    const file = event.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = function (e) {
+        document.getElementById("previewArea").src = e.target.result;
+      };
+      reader.readAsDataURL(file);
+    }
+  });
+
+  // Botão para remover a imagem
+  document.getElementById("removeImage").addEventListener("click", function () {
+    document.getElementById("previewArea").src = "./imagens/Eu/LOGO.png"; // Voltar para a imagem padrão
+    document.getElementById("file").value = ""; // Resetar o input
+  });
+
+  });
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  const BotaoResetar = document.querySelector("#resetar");
+
+  const CampoNomeLogo = document.querySelector("#campoNomeLogo");
+  const CampoTitulo = document.querySelector("#campoNomeTitulo");
+  const CampoNome = document.querySelector("#campoNome");
+  const CampoTema = document.querySelector("#campoTema");
+  const imgTema = document.querySelector("#imgTema");
+  const CampoFundo = document.querySelector(".ContinerVisualizacaoImagem");
+  const porcetagem = document.querySelector(".porcetagem");
+  const corTexto = document.querySelector(".corTexto");
+  const corBarra = document.querySelector(".corBarra");
+  const continerBarra = document.querySelector(".Linha");
+  const corBarraTexto = document.querySelector(".corBarraTexto");
+  const continerBarraTexto = document.querySelector(".textoIcone");
+  const continerTextoEIcone = document.querySelector(".VisualizacaoTipoDeProjeto");
+
+  function resetarImagem() {
+
+    CampoNomeLogo.textContent = 'NOME DA EMPRESA';
+    CampoTitulo.textContent = 'Gerador de Thumbnail para o Github';
+    CampoNome.textContent = 'Feito por Thiago Abraao';
+    CampoTema.textContent = 'pessoal';
+    imgTema.src = '/imagens/icones/lapis.svg';
+    imgTema.alt = `icone`;
+    CampoFundo.style.setProperty(
+      "--fundo-imagem",
+      'url("/imagens/fundos/fundoBrancoGeometrico.jpg")'
+    );
+    CampoFundo.style.setProperty("--blur-value", `0px`);
+    porcetagem.textContent = `0%`;
+    CampoFundo.style.color = '#000000';
+    corTexto.textContent = `#000000`;
+    corBarra.textContent = `#ffa500`;
+    continerBarra.style.backgroundColor = `#ffa500`;
+    continerTextoEIcone.style.backgroundColor = `#ffa500`;
+    corBarraTexto.textContent = '#000000';
+    continerBarraTexto.style.color = '#000000';
+    document.getElementById("previewArea").src = "./imagens/Eu/LOGO.png";
+
+  }
+
+  BotaoResetar.addEventListener("click", resetarImagem);
+
+});
+
+document.querySelector(".baixarImagem").addEventListener("click", function(e) {
+  e.preventDefault(); 
+
+ 
+  const container = document.querySelector(".ContinerVisualizacaoImagem");
+
+  
+  html2canvas(container, { scale: 2 }).then(canvas => {
+  
+    const targetWidth =  1800;
+    const targetHeight = 1050;
+
+    
+    const scaledCanvas = document.createElement('canvas');
+    scaledCanvas.width = targetWidth;
+    scaledCanvas.height = targetHeight;
+    const ctx = scaledCanvas.getContext('2d');
+
+   
+    ctx.drawImage(canvas, 0, 0, targetWidth, targetHeight);
+
+   
+    const imgData = scaledCanvas.toDataURL("image/png");
+
+   
+    const link = document.createElement("a");
+    link.href = imgData;
+    link.download = "thumbnail.png";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  });
+});
