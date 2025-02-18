@@ -94,7 +94,38 @@ mark {
 
 }
 
+.link {
 
+    color: rgb(181, 103, 255);
+
+}
+
+.link:hover {
+
+    color: rgb(213, 168, 255);
+
+}
+
+@media (max-width: 1080px) {
+
+    .ContinerSobreProjeto {
+
+        width: 80%;
+       
+    }
+    
+}
+
+@media (max-width: 700px) {
+
+    .ContinerSobreProjeto {
+
+        width: 90%;
+       
+    }
+    
+}
+  
 @media (max-width: 421px) {
   
     .TituloTopo {

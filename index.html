@@ -92,7 +92,7 @@
 
           <p class="texto">
             <br /><br /><br />
-            &lt;p&gt; <mark> - A pagina tem certa responsividade (320px - 3500px) e não importa o tamanho da sua tela e como você esteja vendo, a imagem baixada vai ter tamanho de:  </mark> &lt;/p&gt; <br />
+            &lt;p&gt; <mark> - A pagina tem certa responsividade (320px - 3500px) e não importa o tamanho da sua tela e como você esteja vendo, <br> a imagem baixada vai ter tamanho de:  </mark> &lt;/p&gt; <br />
             <br />
             &lt;p&gt; <mark> - todos os textos tem limites de caracteres </mark> &lt;/p&gt; <br />
             <br />
@@ -113,7 +113,7 @@
             </mark>
             &lt;/p&gt; <br />
             <br />
-            &lt;p&gt; <mark> - algum texto aqui. </mark> &lt;/p&gt; <br />
+            &lt;p&gt; <mark> - <a class="link" href="https://github.com/Thiago-engenheiro/GeradorThumbnail.git" target="_blank" rel="noopener noreferrer"> Link para repositorio</a></mark> &lt;/p&gt; <br/>
             <br />
           </p>
         </div>
@@ -123,13 +123,13 @@
         <div class="continerVisualizacaoCima">
           <img class="Logo" src="./imagens/Eu/LOGO.png" alt="Logo" />
 
-          <h2 class="tituloSlogan">Nome da empresa</h2>
+          <h2 id="campoNomeLogo" class="tituloSlogan">Nome da empresa</h2>
         </div>
 
         <div class="continerVisualizacaoMeio">
-          <h3 class="tituloVisualizacao">Gerador de Thumbnail para o Github</h3>
+          <h3 id="campoNomeTitulo" class="tituloVisualizacao">Gerador de Thumbnail para o Github</h3>
 
-          <h4 class="subtituloVisualizacao">Feito por Thiago Abraao</h4>
+          <h4 id="campoNome" class="subtituloVisualizacao">Feito por Thiago Abraao</h4>
         </div>
 
         <div class="continerVisualizacaoFinal">
@@ -138,9 +138,9 @@
           </div>
 
           <div class="VisualizacaoTipoDeProjeto">
-            <img class="Icone" src="./imagens/icones/lapis.svg" alt="Icone" />
+            <img id="imgTema" class="Icone" src="./imagens/icones/lapis.svg" alt="Icone" />
 
-            <p class="textoIcone">mini icone</p>
+            <p id="campoTema" class="textoIcone">mini icone</p>
           </div>
         </div>
       </section>
@@ -154,30 +154,36 @@
           <div class="input_container">
             <label for="" class="input_nomeLogo"
               >nome da logo/empresa
-              <mark class="textoInformativo">algum texto</mark>
+              <mark class="textoInformativo contador" data-input="input-name-empresa">
+              </mark>
             </label>
             <input
-              id=""
-              class="input input_ContinerNomeLogo"
+              id="input-name-empresa"
+              class="input input_ContinerNomeLogo input-contador"
               type="text"
               name="input-name"
               title="Inpit title"
               placeholder="Nome da empresa"
+              value="Nome da empresa"
+              maxlength="15"
             />
           </div>
 
           <div class="input_container">
             <label for="" class="input_principal"
               >Titulo principal
-              <mark class="textoInformativo">algum texto</mark>
+              <mark class="textoInformativo contador" data-input="input-tituloPrincipal">
+              </mark>
             </label>
             <input
-              id=""
-              class="input input_ContinerPrincipal"
+              id="input-tituloPrincipal"
+              class="input input_ContinerPrincipal input-contador"
               type="text"
               name="input-principal"
               title="Inpit title"
               placeholder="Gerador de Thumbnail para o Github"
+              value="Gerador de Thumbnail para o Github"
+              maxlength="35"
             />
           </div>
         </div>
@@ -186,23 +192,67 @@
           <div class="input_container">
             <label for="opcoes" class="input_Subtitulo"
               >fundo do Thumbnail
-              <mark class="textoInformativo">algum texto</mark>
             </label>
-            <select id="opcoes" name="opcoes" class="inputSelecionar">
-              <option value="opcao1">Opção 1</option>
-              <option value="opcao2">Opção 2</option>
-              <option value="opcao3">Opção 3</option>
+            <select id="fundo" name="fundo" class="inputSelecionar">
+              <option value="geometricoBranco01" selected>Geometrico --- branco-01</option>
+              <option value="geometricoBranco02">Geometrico --- branco-02</option>
+              <option value="geometricoBranco03">Geometrico --- branco-03</option>
+              <option value="geometricoBranco04">Geometrico --- branco-04</option>
+              <option value="geometricoBranco05">Geometrico --- branco-05</option>
+
+              <option value="geometricoEscuro01">Geometrico --- escuro-01</option>
+              <option value="geometricoEscuro02">Geometrico --- escuro-02</option>
+              <option value="geometricoEscuro03">Geometrico --- escuro-03</option>
+              <option value="geometricoEscuro04">Geometrico --- escuro-04</option>
+              <option value="geometricoEscuro05">Geometrico --- escuro-05</option>
+              <option value="geometricoEscuro06">Geometrico --- escuro-06</option>
+
             </select>
           </div>
 
           <div class="input_container">
             <label for="opcoes" class="input_Subtitulo"
-              >Tema do projeto <mark class="textoInformativo">algum texto</mark>
+              >Tema do projeto 
             </label>
-            <select id="opcoes" name="opcoes" class="inputSelecionar">
-              <option value="opcao1">Opção 1</option>
-              <option value="opcao2">Opção 2</option>
-              <option value="opcao3">Opção 3</option>
+            <select id="opcoesTema" name="opcoesTema" class="inputSelecionar">
+              <option value="arquitetura">Arquitetura</option>
+              <option value="arteDesign">Arte & Design</option>
+              <option value="automotivo">Automotivo</option>
+              <option value="bemEstar">Saúde & Bem-estar</option>
+              <option value="biotecnologia">Biotecnologia</option>
+              <option value="ciberseguranca">Cibersegurança</option>
+              <option value="ciencia">Ciência</option>
+              <option value="cinema">Cinema</option>
+              <option value="comercio">Comércio</option>
+              <option value="criptomoedas">Criptomoedas</option>
+              <option value="dados">Dados</option>
+              <option value="direito">Direito</option>
+              <option value="educacao">Educação</option>
+              <option value="engenharia">Engenharia</option>
+              <option value="espaço">Espaço</option>
+              <option value="esportes">Esportes</option>
+              <option value="estatistica">Estatística</option>
+              <option value="estudos">Estudos</option>
+              <option value="filosofia">Filosofia</option>
+              <option value="financas">Finanças</option>
+              <option value="fotografia">Fotografia</option>
+              <option value="gastronomia">Gastronomia</option>
+              <option value="IA">Inteligência Artificial</option>
+              <option value="idiomas">Idiomas</option>
+              <option value="jogos">Jogos</option>
+              <option value="literatura">Literatura</option>
+              <option value="marketing">Marketing</option>
+              <option value="meioAmbiente">Meio Ambiente</option>
+              <option value="medicina">Medicina</option>
+              <option value="moda">Moda</option>
+              <option value="musica">Música</option>
+              <option value="pessoal" selected>Pessoal</option>
+              <option value="programação">Programação</option>
+              <option value="psicologia">Psicologia</option>
+              <option value="religiao">Religião</option>
+              <option value="robotica">Robótica</option>
+              <option value="tecnologia">Tecnologia</option>
+              <option value="turismo">Turismo</option>
             </select>
           </div>
         </div>
@@ -211,25 +261,28 @@
           <div class="input_container">
             <label for="" class="input_Subtitulo"
               >Seu nome//Subtitulo
-              <mark class="textoInformativo">algum texto</mark>
+              <mark class="textoInformativo contador" data-input="input-seuNome">
+              </mark>
             </label>
             <input
-              id=""
-              class="input input_ContinerSubtitulo"
+              id="input-seuNome"
+              class="input input_ContinerSubtitulo contador input-contador"
               type="text"
               name="input-Subtitulo"
               title="Inpit title"
               placeholder="Feito por Thiago Abraao"
+              value="Feito por Thiago Abraao"
+              maxlength="25"
             />
           </div>
 
           <div class="input_container">
             <label for="blurRange"
               >Desfoque do fundo:
-              <mark class="textoInformativo">algum texto</mark>
+              <mark class="textoInformativo porcetagem" data-input="blurRange" ></mark>
             </label>
             <input
-              class="inputRange"
+              class="inputRange porcetagem"
               type="range"
               id="blurRange"
               min="0"
@@ -244,13 +297,13 @@
           <div class="input_container">
             <label for="cor" class="input_Subtitulo"
               >Cor para o texto
-              <mark class="textoInformativo">algum texto</mark>
+              <mark class="textoInformativo corTexto" data-input="CorTexto"></mark>
             </label>
             <input
               class="inputColor"
               type="color"
-              id="cor"
-              name="cor"
+              id="corTexto"
+              name="corTexto"
               value="#000"
             />
           </div>
@@ -258,14 +311,14 @@
           <div class="input_container">
             <label for="cor" class="input_Subtitulo"
               >Cor para a barra
-              <mark class="textoInformativo">algum texto</mark>
+              <mark class="textoInformativo corBarra" data-input="corBarra"></mark>
             </label>
             <input
               class="inputColor"
               type="color"
-              id="cor"
-              name="cor"
-              value="#004643"
+              id="corBarra"
+              name="corBarra"
+              value="#FFA500"
             />
           </div>
         </div>
@@ -299,9 +352,14 @@
 
         <div class="linhaDecorativa"></div>
 
-        <button class="limparFormulario">limpar Formulario</button>
+        <div class="continerBotoesFormulario">
 
-        <button class="baixarImagem">Baixar imagem</button>
+          <button type="reset" class="limparFormulario">Resetar Formulario</button>
+
+          <button class="baixarImagem">Baixar imagem</button>
+
+        </div>
+
       </form>
 
       <section class="Rodape">
@@ -313,5 +371,9 @@
         </div>
       </section>
     </div>
+
+    <script src="./js/formulario.js"></script>
+
   </body>
+
 </html>
