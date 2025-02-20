@@ -142,6 +142,19 @@ document.addEventListener("DOMContentLoaded", function () {
     geometricoEscuro04: "/imagens/fundos/fundoEscuroGeometrico4.jpg",
     geometricoEscuro05: "/imagens/fundos/fundoEscuroGeometrico5.jpg",
     geometricoEscuro06: "/imagens/fundos/fundoEscuroGeometrico6.jpg",
+
+    geometricoColorido01: "/imagens/fundos/coloridoGeometrico.jpg",
+    geometricoColorido02: "/imagens/fundos/coloridoGeometrico02.jpg",
+    geometricoColorido03: "/imagens/fundos/coloridoGeometrico03.jpg",
+    geometricoColorido04: "/imagens/fundos/coloridoGeometrico04.jpg",
+    geometricoColorido05: "/imagens/fundos/coloridoGeometrico05.jpg",
+
+    geometricoAzul: "/imagens/fundos/azulGeometrico.jpg",
+    geometricoAmarelo: "/imagens/fundos/amareloGeometrico.jpg",
+    geometricoRosa: "/imagens/fundos/rosaGeometrico.jpg",
+    geometricoRoxo: "/imagens/fundos/roxoGeometrico.jpg",
+    geometricoVermelho: "/imagens/fundos/VermelhoGeometrico.jpg",
+
   };
 
   function atualizarFundo() {
