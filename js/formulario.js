@@ -148,12 +148,24 @@ document.addEventListener("DOMContentLoaded", function () {
     geometricoColorido03: "/imagens/fundos/coloridoGeometrico03.jpg",
     geometricoColorido04: "/imagens/fundos/coloridoGeometrico04.jpg",
     geometricoColorido05: "/imagens/fundos/coloridoGeometrico05.jpg",
-
+    geometricoColorido06: "/imagens/fundos/coloridoGeometrico06.jpg",
+    geometricoColorido07: "/imagens/fundos/coloridoGeometrico07.jpg",
+    geometricoColorido08: "/imagens/fundos/coloridoGeometrico08.jpg",
+  
     geometricoAzul: "/imagens/fundos/azulGeometrico.jpg",
     geometricoAmarelo: "/imagens/fundos/amareloGeometrico.jpg",
     geometricoRosa: "/imagens/fundos/rosaGeometrico.jpg",
     geometricoRoxo: "/imagens/fundos/roxoGeometrico.jpg",
     geometricoVermelho: "/imagens/fundos/VermelhoGeometrico.jpg",
+
+    art01: "/imagens/fundos/art01.jpg",
+    art02: "/imagens/fundos/art02.jpg",
+
+    carro01: "/imagens/fundos/carro01.jpg",
+
+    cidade01: "/imagens/fundos/cidade01.jpg",
+    cidade02: "/imagens/fundos/cidade02.jpg",
+    cidade03: "/imagens/fundos/cidade03.jpg",
 
   };
 
